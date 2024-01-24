@@ -70,3 +70,6 @@ button:focus-visible {
 ul {
   list-style: none;
 }
+p {
+  margin: 0px;
+}
