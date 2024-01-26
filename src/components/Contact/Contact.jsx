@@ -1,7 +1,7 @@
 import css from './Contact.module.css'
 import { FaUserLarge } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
-export const Contact = ({ user:{name, number} }) => {
+export const Contact = ({ user:{name, number, id}, onDelete }) => {
 
     return (
         <div className={css.profile}>
@@ -17,7 +17,7 @@ export const Contact = ({ user:{name, number} }) => {
                       
              </div>
          
-  <button>Delete</button>
+  <button onClick={()=>onDelete(id)}>Delete</button>
 
   </div>
     )
