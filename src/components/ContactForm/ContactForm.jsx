@@ -6,7 +6,7 @@ export const ContactForm = ({ onAdd }) => {
     const contactSchema = Yup.object().shape(
         {
         name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
-        number: Yup.number().required().positive().integer().required("Required"),
+        number: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
         }
     )
     const userId1 = useId();
