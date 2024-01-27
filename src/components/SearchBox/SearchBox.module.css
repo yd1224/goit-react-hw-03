@@ -1,7 +1,7 @@
 .divStyle {
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
+  align-items: center;
 }
 .input {
   max-width: 268px;

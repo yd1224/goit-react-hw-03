@@ -2,7 +2,8 @@
 import { ContactList } from './components/ContactList/ContactList'
 import { SearchBox } from './components/SearchBox/SearchBox'
 import {ContactForm} from './components/ContactForm/ContactForm'
-import {useState} from "react";
+import { useState } from "react";
+
 
 
 const contacts = [
@@ -19,10 +20,25 @@ function App() {
   const handleChange = evt => {
     setInputValue(evt.target.value);
   }
-  
-    const foundContact = contact.filter(contact =>
-      contact.name.trim().toLowerCase().includes(inputValue.trim().toLowerCase()));
-  // setContact(foundContact);
+
+let foundContact = contact.filter(contact => {
+
+  const nameWords = contact.name.toLowerCase().split(" ");
+console.log(nameWords);
+
+  const valueWords = inputValue.toLowerCase().replace(/\s+/g, ' ');
+console.log(valueWords);
+  if (nameWords[0].startsWith(valueWords) || nameWords[1].startsWith(valueWords)
+    ||(nameWords[0] + " "+nameWords[1]).startsWith(valueWords)) {
+    console.log("!!!");
+    return true; 
+  }
+});
+  console.log(foundContact);
+  if (foundContact.length === 0) {
+    foundContact = [...contact];
+
+}
   const deleteUser = userId => {
     setContact((prevContacts) => {
       return prevContacts.filter((user) => user.id !== userId);

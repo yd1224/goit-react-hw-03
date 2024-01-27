@@ -73,6 +73,8 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 15px;
+  justify-content: center;
+  padding: 0;
 }
 p {
   margin: 0px;
