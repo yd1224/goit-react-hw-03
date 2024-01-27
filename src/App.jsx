@@ -29,21 +29,17 @@ function App() {
     })
   }
   const addUser = (newUser) => {
-    console.log(newUser);
       setContact((prevContacts) => {
-        return [...prevContacts, {
-          id: Date(null), 
-          name: newUser,
-           number: Date(null)
-      }];
+        return [...prevContacts, newUser];
     })
   }
   return (
 
      <div>
       <h1>Phonebook</h1>
-      <SearchBox handleChange={handleChange } inputValue={inputValue} />
-  <ContactForm onAdd={addUser} />
+   
+      <ContactForm onAdd={addUser} />
+         <SearchBox handleChange={handleChange } inputValue={inputValue} />
       <ContactList contacts={foundContact} onDelete={deleteUser} />
       {/* <select name="payment"
              value={paymentMethod} onChange={evt => {

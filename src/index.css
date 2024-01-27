@@ -24,7 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+
   min-width: 320px;
   min-height: 100vh;
 }
@@ -68,6 +68,11 @@ button:focus-visible {
 }
 ul {
   list-style: none;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
 }
 p {
   margin: 0px;

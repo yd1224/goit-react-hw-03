@@ -4,7 +4,7 @@
   padding-left: 40px;
 }
 .input {
-  width: 100%;
+  max-width: 268px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
